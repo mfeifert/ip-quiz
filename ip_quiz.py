@@ -38,9 +38,7 @@ def eight_bit_integer_quiz():
 def subnet_and_broadcast_address_quiz():
     try:
         while True:
-            octets = [str(random.randint(0, 255)) for i in range(4)]
-            random_ip_address = ".".join(octets)
-            random_ip_address += f"/{str(random.randint(0, 32))}"
+            random_ip_address = generate_random_ip_address()
             print(random_ip_address)
             #input()
             input()
@@ -51,6 +49,11 @@ def subnet_and_broadcast_address_quiz():
             print()
     except (KeyboardInterrupt, EOFError):
         pass
-    
+
+def generate_random_ip_address():
+    octets = [str(random.randint(0, 255)) for i in range(4)]
+    random_ip_address = ".".join(octets)
+    random_ip_address += f"/{str(random.randint(0, 32))}"
+    return random_ip_address
 
 main()
