@@ -45,21 +45,12 @@ def subnet_and_broadcast_address_quiz():
             #input()
             input()
             print(ipaddress.IPv4Interface(random_ip_address).network.network_address)
-            print(calculate_broadcast_address(random_ip_address))
+            print(ipaddress.IPv4Interface(random_ip_address).network.broadcast_address)
             print()
             print('------------')
             print()
     except (KeyboardInterrupt, EOFError):
         pass
     
-
-def calculate_broadcast_address(ip_with_prefix):
-    ip_network = ipaddress.ip_network(ip_with_prefix, strict=False)
-    network_address = ip_network.network_address
-    host_bits_remaining = ip_network.max_prefixlen - ip_network.prefixlen
-    broadcast_address = int(network_address) + (2 ** host_bits_remaining) - 1
-    broadcast_address_ipv4 = ipaddress.IPv4Address(broadcast_address)
-    return str(broadcast_address_ipv4)
-
 
 main()
