@@ -20,7 +20,7 @@ def main():
         if selection == 1:
             eight_bit_integer_quiz()
         if selection == 2:
-            subnet_and_broadcast_address_quiz()
+            network_and_broadcast_address_quiz()
         if selection == 3:
             first_and_last_host_address_quiz()
     except (KeyboardInterrupt, EOFError):
@@ -38,7 +38,7 @@ def eight_bit_integer_quiz():
         pass
 
 
-def subnet_and_broadcast_address_quiz():
+def network_and_broadcast_address_quiz():
     try:
         while True:
             random_ip_address = generate_random_ip_address()
@@ -75,5 +75,6 @@ def generate_random_ip_address():
     random_ip_address = ".".join(octets)
     random_ip_address += f"/{str(random.randint(0, 32))}"
     return random_ip_address
+
 
 main()
