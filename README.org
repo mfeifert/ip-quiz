@@ -20,7 +20,7 @@ Quit the program by pressing ~Ctrl+D~ or ~Ctrl+C~.
 
 ** 1. Decimal integers (0-255) to bits
 
-A random number from 0 to 255 is printed.  In the line below, enter the equivalent 8-bit value and press enter.  The correct 8-bit value is shown, and a new number is printed.
+A random number from 0 to 255 is printed.  In the following line, type the equivalent 8-bit value and press enter.  The correct 8-bit value is shown, and a new number is printed.
 
 *Example:*
 
@@ -40,7 +40,7 @@ A random number from 0 to 255 is printed.  In the line below, enter the equivale
 
 ** 2. IPv4 address to network and broadcast addresses
 
-A random IP address in CIDR notation is printed.  In the following two lines, enter the network address and the broadcast address associated with the provided IP address.  The correct network and broadcasts addresses are shown, and a new random IP address is printed.  A dividing line is printed between quiz questions for clarity.
+A random IP address in CIDR notation is printed.  In the following two lines, enter the network address and broadcast address associated with the provided IP address.  The correct network and broadcasts addresses are shown, and a new random IP address is printed.  A dividing line is placed between quiz questions for clarity.
 
 Randomly generated addresses include the theoretical maximum range of ~0.0.0.0~ to ~255.255.255.255~, and prefix lengths from ~0~ to ~32~.
 
