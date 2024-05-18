@@ -6,7 +6,7 @@ import random
 
 def main():
     menu = [
-        '1. Integers (0-255) to bits',
+        '1. Decimal integers (0-255) to bits',
         '2. IPv4 address to network and broadcast addresses',
         '3. IPv4 address to first and last host addresses'
     ]
@@ -43,7 +43,7 @@ def network_and_broadcast_address_quiz():
         while True:
             random_ip_address = generate_random_ip_address()
             print(random_ip_address)
-            #input()
+            input()
             input()
             print(ipaddress.IPv4Interface(random_ip_address).network.network_address)
             print(ipaddress.IPv4Interface(random_ip_address).network.broadcast_address)
@@ -59,7 +59,7 @@ def first_and_last_host_address_quiz():
         while True:
             random_ip_address = generate_random_ip_address()
             print(random_ip_address)
-            #input()
+            input()
             input()
             print(ipaddress.IPv4Interface(random_ip_address).network.network_address + 1)
             print(ipaddress.IPv4Interface(random_ip_address).network.broadcast_address - 1)
