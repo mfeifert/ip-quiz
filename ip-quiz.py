@@ -44,7 +44,7 @@ def network_and_broadcast_address_quiz():
             random_ip_address = generate_random_ip_address()
             print(random_ip_address)
             input()
-            input()
+            # input()
             print(ipaddress.IPv4Interface(random_ip_address).network.network_address)
             print(ipaddress.IPv4Interface(random_ip_address).network.broadcast_address)
             print()
