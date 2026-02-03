@@ -42,13 +42,10 @@ def network_and_broadcast_address_quiz():
     try:
         while True:
             random_ip_address = generate_random_ip_address()
-            print(random_ip_address)
+            print(random_ip_address, end=" ")
             input()
-            # input()
             print(ipaddress.IPv4Interface(random_ip_address).network.network_address)
             print(ipaddress.IPv4Interface(random_ip_address).network.broadcast_address)
-            print()
-            print('------------')
             print()
     except (KeyboardInterrupt, EOFError):
         pass
@@ -58,13 +55,10 @@ def first_and_last_host_address_quiz():
     try:
         while True:
             random_ip_address = generate_random_ip_address()
-            print(random_ip_address)
-            input()
+            print(random_ip_address, end=" ")
             input()
             print(ipaddress.IPv4Interface(random_ip_address).network.network_address + 1)
             print(ipaddress.IPv4Interface(random_ip_address).network.broadcast_address - 1)
-            print()
-            print('------------')
             print()
     except (KeyboardInterrupt, EOFError):
         pass
