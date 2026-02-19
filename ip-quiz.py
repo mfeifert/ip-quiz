@@ -67,7 +67,11 @@ def first_and_last_host_address_quiz():
 def generate_random_ip_address():
     octets = [str(random.randint(0, 255)) for i in range(4)]
     random_ip_address = ".".join(octets)
-    random_ip_address += f"/{str(random.randint(0, 32))}"
+    mask = random.randint(0, 32)
+    while mask in [0, 8, 16, 24, 32]:
+        mask = random.randint(0, 32)
+    mask = str(mask)
+    random_ip_address += f"/{mask}"
     return random_ip_address
 
 
